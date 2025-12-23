@@ -1,0 +1,124 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #373434;
+  color: rgb(255, 255, 255);
+  font-size: larger;
+}
+
+header {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;     
+  background-color: #373434;
+  color: #0b0000;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+nav {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  background-color: #444;
+  padding: 0.5rem;
+  gap: 10px;               
+  flex-wrap: wrap;       
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px; 
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0000;
+  color:  rgb(255, 255, 255);
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+  font-size: larger;
+}
+
+main {
+  padding: 20px;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center; 
+}
+
+/* FILMKORT */
+.movie {
+  width: 250px; 
+  transition: transform 0.5s; 
+}
+
+.movie:hover {
+  transform: scale(1.2);
+}
+
+.movie img {
+  width: 100%;        
+  border-radius: 60px;
+}
+
+/* RESPONSIVA JUSTERINGAR */
+@media (max-width: 1024px) {
+  .movie {
+    width: 200px; /* mindre kort på surfplattor */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: medium; /* mindre text på tablets och mobiler */
+  }
+  nav {
+    flex-direction: column; /* nav-länkar staplas vertikalt */
+    gap: 5px;
+  }
+  .movie {
+    width: 45%; /* två kort per rad på mobiler */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie {
+    width: 90%; /* ett kort per rad på små mobiler */
+  }
+  main {
+    padding: 10px;
+  }
+}
+
+
+/* Container för hela watchlist */
+#watchlist {
+  display: flex;          
+  flex-wrap: wrap;       
+  gap: 1rem;              
+  padding: 1rem;
+}
+
+.watchlist-item {
+  display: flex;          
+  flex-direction: column; /* lägg titel ovanför bilden */
+  align-items: center;    /* centrera innehåll */
+  width: 150px;           /* valfri bredd per film */
+  padding: 0.5rem;
+  border-radius: 8px;
+}

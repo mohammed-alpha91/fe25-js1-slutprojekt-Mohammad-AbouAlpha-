@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Movie Database</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/main.js" type="module" ></script>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header id="main-header">
+    <h1><a href="index.html">📺 The Movie Database 🎥</a></h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a id="top10Ranked" href="#">Top 10 Ranked Movies Of All Time</a></li>
+      <li><a id="top10Popular" href="#">Top 10 Most Popular Movies Today</a></li>
+    </ul>
+
+    <!-- Form för att söka filmer -->
+    <form id="searchForm">
+      <label for="sortSelect">Sort By:</label>
+      <select id="sortSelect">
+        <option value="newest">Nyast först</option>
+        <option value="oldest">Äldst först</option>
+        <option value="title">Title A-Z</option>
+      </select>
+      <input type="text" id="searchMovieInput" placeholder="Search Movie">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Form för att söka personer -->
+    <form id="searchPeopleForm">
+      <input type="text" id="searchPeopleInput" placeholder="Search Person">
+      <button type="submit">Search Person</button>
+    </form>
+  </nav>
+
+  <!-- Filmer som visas från Top10, Popular eller sök -->
+  <main id="content"></main>
+
+  <!-- Watchlist med titel -->
+  <section id="watchlist-section">
+    <h2>Movies to Watch</h2>
+    <div id="watchlist"></div>
+  </section>
+
+  <footer id="main-footer">
+    📺 The Movie Database 🎥
+  </footer>
+</body>
+</html>
